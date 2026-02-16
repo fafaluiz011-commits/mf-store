@@ -1,1 +1,203 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MF STORE | Moda Premium Masculina</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Topbar -->
+  <div class="topbar" aria-label="Aviso de envio">
+    <div class="topbar__track" id="topbarTrack">
+      <span>Enviamos para todo Brasil</span>
+      <span>Enviamos para todo Brasil</span>
+      <span>Enviamos para todo Brasil</span>
+      <span>Enviamos para todo Brasil</span>
+      <span>Enviamos para todo Brasil</span>
+      <span>Enviamos para todo Brasil</span>
+      <span>Enviamos para todo Brasil</span>
+      <span>Enviamos para todo Brasil</span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <a class="brand" href="#top" aria-label="MF STORE">
+        <span class="brand__logo">MF</span>
+        <span class="brand__name">MF STORE</span>
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="#inicio">Início</a>
+        <a href="#produtos">Produtos</a>
+        <a href="#tamanhos">Tamanhos</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <div class="header__actions">
+        <button class="iconbtn" type="button" id="openCartBtn" aria-label="Abrir carrinho">
+          <span class="icon">🛒</span>
+          <span class="badge" id="cartCount">0</span>
+        </button>
+
+        <button class="hamburger" id="hamburger" aria-label="Abrir menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main id="inicio">
+    <section class="hero" style="--hero-img: url('assets/hero.jpg');">
+      <div class="hero__overlay"></div>
+
+      <div class="container hero__content">
+        <div class="hero__kicker">Luxo minimalista • Moda premium masculina</div>
+
+        <h1 class="hero__title">KIT 5 CAMISAS</h1>
+        <p class="hero__subtitle">POR APENAS <strong>R$ 400,00</strong></p>
+
+        <div class="hero__ctaRow">
+          <a class="cta" href="#produtos">VER PRODUTOS</a>
+          <button class="cta cta--ghost" type="button" id="heroAddKit">
+            ADICIONAR KIT AO CARRINHO
+          </button>
+        </div>
+
+        <div class="hero__note">
+          Envio para todo Brasil • Pagamento seguro • Atendimento via WhatsApp
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust bar -->
+    <section class="trust">
+      <div class="container trust__grid">
+        <div class="trust__item">
+          <div class="trust__dot"></div>
+          <div>
+            <strong>Qualidade premium</strong>
+            <span>Peças selecionadas</span>
+          </div>
+        </div>
+        <div class="trust__item">
+          <div class="trust__dot"></div>
+          <div>
+            <strong>Pagamento seguro</strong>
+            <span>Pix e cartão</span>
+          </div>
+        </div>
+        <div class="trust__item">
+          <div class="trust__dot"></div>
+          <div>
+            <strong>Entrega Brasil</strong>
+            <span>Rápida e rastreável</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Produtos -->
+    <section class="section" id="produtos">
+      <div class="container">
+        <div class="section__head">
+          <h2>Produtos</h2>
+          <p>Selecione suas peças e finalize no carrinho.</p>
+        </div>
+
+        <div class="grid">
+
+          <!-- 1 -->
+          <article class="card">
+            <img src="assets/produtos/bermuda-tactel-3d.jpg" alt="Bermuda tactel tradicional 3D">
+            <div class="card__body">
+              <h3>Bermuda tactel tradicional 3D</h3>
+              <div class="price">
+                <span class="price__from">De R$130,00</span>
+                <span class="price__to">Por R$74,99</span>
+                <span class="price__inst">12x de R$7,17</span>
+              </div>
+
+              <div class="actions">
+                <button class="btn" type="button"
+                  onclick="addToCart({
+                    id:'bermuda-tactel-3d',
+                    name:'Bermuda tactel tradicional 3D',
+                    price:74.99,
+                    from:'R$130,00',
+                    inst:'12x de R$7,17',
+                    img:'assets/produtos/bermuda-tactel-3d.jpg'
+                  })">Adicionar ao carrinho</button>
+
+                <button class="btn btn--ghost" type="button"
+                  onclick="buyNow({
+                    id:'bermuda-tactel-3d',
+                    name:'Bermuda tactel tradicional 3D',
+                    price:74.99,
+                    from:'R$130,00',
+                    inst:'12x de R$7,17',
+                    img:'assets/produtos/bermuda-tactel-3d.jpg'
+                  })">Comprar agora</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2 -->
+          <article class="card">
+            <img src="assets/produtos/bermuda-elastano.jpg" alt="Bermuda com elastano">
+            <div class="card__body">
+              <h3>Bermuda com elastano</h3>
+              <div class="price">
+                <span class="price__from">De R$180,00</span>
+                <span class="price__to">Por R$84,98</span>
+                <span class="price__inst">12x de R$9,17</span>
+              </div>
+
+              <div class="actions">
+                <button class="btn" type="button"
+                  onclick="addToCart({
+                    id:'bermuda-elastano',
+                    name:'Bermuda com elastano',
+                    price:84.98,
+                    from:'R$180,00',
+                    inst:'12x de R$9,17',
+                    img:'assets/produtos/bermuda-elastano.jpg'
+                  })">Adicionar ao carrinho</button>
+
+                <button class="btn btn--ghost" type="button"
+                  onclick="buyNow({
+                    id:'bermuda-elastano',
+                    name:'Bermuda com elastano',
+                    price:84.98,
+                    from:'R$180,00',
+                    inst:'12x de R$9,17',
+                    img:'assets/produtos/bermuda-elastano.jpg'
+                  })">Comprar agora</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3 -->
+          <article class="card">
+            <img src="assets/produtos/camiseta-ultra-dry.jpg" alt="Camiseta Estampada Tradicional de Tênis Ultra-Dry">
+            <div class="card__body">
+              <h3>Camiseta Estampada Tradicional de Tênis Ultra-Dry</h3>
+              <div class="price">
+                <span class="price__from">De R$150,00</span>
+                <span class="price__to">Por R$99,00</span>
+                <span class="price__inst">12x de R$8,20</span>
+              </div>
+
+              <div class="actions">
+                <button class="btn" type="button"
+                  onclick="addToCart({
 
